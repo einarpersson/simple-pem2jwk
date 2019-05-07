@@ -4,7 +4,8 @@
   "description": "Parse PEM to JWK format for react-native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch" : "jest --watchAll"
   },
   "keywords": [
     "react-native",
@@ -18,5 +19,11 @@
     "asn1js": "^2.0.22",
     "buffer": "^5.2.1",
     "js-base64": "^2.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
   }
 }
