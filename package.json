@@ -1,0 +1,22 @@
+{
+  "name": "react-native-pem2jwk",
+  "version": "0.1.0",
+  "description": "Parse PEM to JWK format for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "pem",
+    "jwk",
+    "rsa"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asn1js": "^2.0.22",
+    "buffer": "^5.2.1",
+    "js-base64": "^2.5.1"
+  }
+}
