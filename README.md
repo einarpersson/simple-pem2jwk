@@ -1,6 +1,6 @@
-# react-native-pem2jwk
+# simple-pem2jwk
 
-Simple RSA key conversion from PEM-format to JWK-format with no dependencies on [Node.js](https://nodejs.org/) or [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API).
+Simple RSA key conversion from PEM-format to JWK-format with no dependencies on [Node.js](https://nodejs.org/) or [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API). Works in react-native.
 
 ## Example for private key;
 ````
