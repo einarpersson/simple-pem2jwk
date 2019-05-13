@@ -1,11 +1,11 @@
 {
   "name": "simple-pem2jwk",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Parse PEM to JWK format with minimal dependencies",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:watch" : "jest --watchAll"
+    "test:watch": "jest --watchAll"
   },
   "keywords": [
     "react-native",
