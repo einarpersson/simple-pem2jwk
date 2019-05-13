@@ -1,7 +1,7 @@
 {
-  "name": "react-native-pem2jwk",
-  "version": "0.1.0",
-  "description": "Parse PEM to JWK format for react-native",
+  "name": "simple-pem2jwk",
+  "version": "0.1.1",
+  "description": "Parse PEM to JWK format with minimal dependencies",
   "main": "index.js",
   "scripts": {
     "test": "jest",
