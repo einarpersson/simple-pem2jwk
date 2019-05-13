@@ -13,6 +13,13 @@ function str2ab(str) {
 
 const buffer2base64uri = buff => buff.toString('base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_')
 
+const addOptions = (jwk, opts) => {
+  if (opts.use && !['sig', 'enc'].includes(opts.use)) {
+    throw Error('"use" must be either "sig" or "enc"')
+  }
+  return { ...jwk, ...opts }
+}
+
 const pem2jwk = (pem, opts) => {
   let kind = undefined
   // fetch the part of the PEM string between header and footer
@@ -54,11 +61,11 @@ const pem2jwk = (pem, opts) => {
     .map((b64, i) => ({ [fieldNames[kind][i]]: b64 }))
 
   const jwk = Object.assign({}, ...fields, { kty: 'RSA' })
+  const result = opts
+    ? addOptions(jwk, opts)
+    : jwk
 
-  jwk.use = opts && opts.use
-  jwk.kid = opts && opts.kid
-
-  return jwk
+  return result
 }
 
 export default pem2jwk

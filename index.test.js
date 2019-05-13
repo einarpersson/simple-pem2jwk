@@ -76,6 +76,16 @@ describe('pem2jwk', () => {
       kid: 'foo'
     })
 
-    expect(jwk).toEqual({ ...publicKey.jwk, use: 'sig', kid: 'foo' })
+    const expected = { ...publicKey.jwk, use: 'sig', kid: 'foo' }
+
+    expect(jwk).toEqual(expected)
+  })
+
+  it('throws if "use" is invalid', () => {
+    expect(() => pem2jwk(publicKey.pem, { use: 'something-else' })).toThrow()
+  })
+
+  it('does not throw if "use" is valid', () => {
+    expect(() => pem2jwk(publicKey.pem, { use: 'enc' })).not.toThrow()
   })
 })
