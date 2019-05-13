@@ -1,11 +1,12 @@
 {
   "name": "simple-pem2jwk",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Parse PEM to JWK format with minimal dependencies",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "build": "babel src --out-dir lib"
   },
   "keywords": [
     "react-native",
@@ -14,6 +15,10 @@
     "rsa"
   ],
   "author": "Einar Persson <me@einarpersson.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/einarpersson/simple-pem2jwk.git"
+  },
   "license": "Apache-2.0",
   "dependencies": {
     "asn1js": "^2.0.22",
@@ -21,6 +26,7 @@
     "js-base64": "^2.5.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "babel-jest": "^24.8.0",

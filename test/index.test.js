@@ -1,4 +1,4 @@
-import pem2jwk from './index'
+import pem2jwk from '../src/index'
 
 const privateKey = {
   pem: `-----BEGIN RSA PRIVATE KEY-----
