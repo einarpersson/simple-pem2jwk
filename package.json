@@ -13,8 +13,8 @@
     "jwk",
     "rsa"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Einar Persson <me@einarpersson.com>",
+  "license": "Apache-2.0",
   "dependencies": {
     "asn1js": "^2.0.22",
     "buffer": "^5.2.1",
