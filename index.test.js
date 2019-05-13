@@ -69,4 +69,13 @@ describe('pem2jwk', () => {
 
     expect(jwk).toEqual(publicKey.jwk)
   })
+
+  it('can add options to jwk object', () => {
+    const jwk = pem2jwk(publicKey.pem, {
+      use: 'sig',
+      kid: 'foo'
+    })
+
+    expect(jwk).toEqual({ ...publicKey.jwk, use: 'sig', kid: 'foo' })
+  })
 })
