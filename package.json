@@ -1,6 +1,6 @@
 {
   "name": "simple-pem2jwk",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Parse PEM to JWK format with minimal dependencies",
   "main": "lib/index.js",
   "scripts": {
