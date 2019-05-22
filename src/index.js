@@ -23,7 +23,9 @@ const addOptions = (jwk, opts) => {
 const pem2jwk = (pem, opts) => {
   let kind = undefined
   // fetch the part of the PEM string between header and footer
-  const lines = pem.split('\n')
+  const lines = pem
+    .trim()
+    .split('\n')
   const pemHeader = lines[0]
   const pemFooter = lines[lines.length - 1]
 
